@@ -145,11 +145,6 @@ class ConvertBotaniqOperator(bpy.types.Operator):
         for i in total_list:
             new_counts.append(i*split)
 
-        # __DEBUG__ #
-        print("\n\n")
-        for i in range(len(names)):
-            print(names[i], new_counts[i])
-
         # find smiler objects and remove all objects from the collection
         prev_name = None
         for i in range(len(names)):
@@ -167,21 +162,11 @@ class ConvertBotaniqOperator(bpy.types.Operator):
             obj.users_collection[0].objects.unlink(obj)
 
         # remove bad counts from counts
-        print("\n\n")
-        print(change_counts)
         change_counts.reverse()
-        print(change_counts)
-        print(new_counts)
         for i in change_counts:
             new_counts[i[0]] += i[1]
             new_counts.pop(i[2])
             names.pop(i[2])
-        print(new_counts)
-
-        # __DEBUG__ #
-        print("\n\n")
-        for i in range(len(names)):
-            print(names[i], new_counts[i])
 
         # loop throw smiler objects and add them to a group collection
         for i in similar_names:
@@ -208,14 +193,8 @@ class ConvertBotaniqOperator(bpy.types.Operator):
                 context.scene.collection.children.link(coll)
                 collections.append(coll)
 
-        print("\n")
-        for i in collections:
-            print(i.name)
         # sort collections
         bubble_sort_name(collections)
-        print("\n")
-        for i in collections:
-            print(i.name)
 
         # add new systems with proper names, objects->Collections, and counts
         for i in range(len(collections)):
@@ -232,7 +211,6 @@ class ConvertBotaniqOperator(bpy.types.Operator):
             sys.use_collection_count = False
             sys.instance_collection = collections[i]
             sys.name = collections[i].name
-            # print(sys.name)
             bpy.ops.scatter.core_convert(
                 "INVOKE_DEFAULT", psy=sys.name, is_gw=False)
 
@@ -251,12 +229,7 @@ class ConvertBotaniqOperator(bpy.types.Operator):
 
         # rename collections
         for i in collections:
-            print(i.name)
-            print("      ", i.name)
             i.name = "SCATTER: " + i.name
-            print("            ", coll.name)
-        return {'FINISHED'}
-
         return {'FINISHED'}
 
 
@@ -278,11 +251,8 @@ class ConvertTrueOperator(bpy.types.Operator):
 
         # rename collections
         for i in bpy.data.particles:
-            print(i.name)
             if sys_name in i.name:
-                print("      ", i.name)
                 coll.name = "SCATTER: " + i.name
-                print("            ", coll.name)
         return {'FINISHED'}
 
 
