@@ -305,7 +305,7 @@ class VIEW_3D_PT_ScatterTools(bpy.types.Panel):
     def draw_header(self, context):
         layout = self.layout
         row = layout.row()
-        row.label(icon="TOOL_SETTINGS", text="Scatter Tools")
+        row.label(icon="TOOL_SETTINGS", text="Scatter Tools Convert")
 
     def draw(self, context):
         preferences = prefs.get_preferences()
