@@ -32,6 +32,9 @@ and at the bottom of the tweaking panel
 To convert particle systems first, scatter the particles. Second, select the particle system created. Third, press the convert button. Optionally press the clean button.
 
 ![image](https://user-images.githubusercontent.com/80712250/111205690-1e4a4980-858d-11eb-860b-2f9934975723.png)
+
+
+The different convert buttons do different things, so make sure to press the correct button.
 ![image](https://user-images.githubusercontent.com/80712250/111205790-3e7a0880-858d-11eb-824b-66545980d47c.png)
 ![image](https://user-images.githubusercontent.com/80712250/111205982-72edc480-858d-11eb-9587-15a5adc95e27.png)
 ![image](https://user-images.githubusercontent.com/80712250/111206065-8a2cb200-858d-11eb-80ea-c3a7a20c905e.png)
