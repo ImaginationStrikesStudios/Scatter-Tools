@@ -24,17 +24,17 @@ class Default(bpy.types.AddonPreferences):
     botaniq: bpy.props.BoolProperty(
         name="Botaniq",
         description="Enabled Botaniq Conversion",
-        default=True)
+        default=False)
 
     true_terrian: bpy.props.BoolProperty(
         name="True Terrain",
         description="Enabled True Terrain Conversion",
-        default=True)
+        default=False)
 
     true_grass: bpy.props.BoolProperty(
         name="True Grass",
         description="Enabled True Grass Conversion",
-        default=True)
+        default=False)
 
     def draw(self, context):
         layout = self.layout
