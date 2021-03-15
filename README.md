@@ -2,6 +2,7 @@
 A set of tools for the Scatter 4.0 addon for blender by BD3D, to convert particle systems from some other addons to Scatter particle systems, and adds some missing batch features.
 
 Scatter Must be installed before installing this addon
+
 Scatter can be found here https://blendermarket.com/products/scatter
 
 Scatter tools can currently convert particle systems from the following addons
