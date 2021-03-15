@@ -309,6 +309,11 @@ class VIEW_3D_PT_ScatterTools(bpy.types.Panel):
 
     def draw(self, context):
         preferences = prefs.get_preferences()
+        
+        if not context.scene.C_Slots_settings.Terrain_pointer == context.active_object:
+            self.layout.label(
+                text="Scatter Target not selected",  icon="ERROR")
+            return
 
         ### Botaniq ###
         if preferences.botaniq:
